@@ -80,7 +80,7 @@ public class PullToRefreshView extends LinearLayout {
     /**
      * footer refresh time
      */
-    // private TextView mFooterUpdateTextView;
+    private TextView mFooterUpdateTextView;
     /**
      * header progress bar
      */
@@ -173,7 +173,6 @@ public class PullToRefreshView extends LinearLayout {
                 .findViewById(R.id.pull_to_refresh_text);
         mHeaderProgressBar = (ProgressBar) mHeaderView
                 .findViewById(R.id.pull_to_refresh_progress);
-
 
         measureView(mHeaderView);
         mHeaderViewHeight = mHeaderView.getMeasuredHeight();
@@ -314,12 +313,12 @@ public class PullToRefreshView extends LinearLayout {
                 int deltaY = y - mLastMotionY;
                 if (mPullState == PULL_DOWN_STATE) {
                     // PullToRefreshView执行下拉
-                    Log.i(TAG, " pull down!parent view move!");
+//                    Log.e(TAG, " pull down!parent view move!");
                     headerPrepareToRefresh(deltaY);
                     // setHeaderPadding(-mHeaderViewHeight);
                 } else if (mPullState == PULL_UP_STATE) {
                     // PullToRefreshView执行上拉
-                    Log.i(TAG, "pull up!parent view move!");
+                    Log.e(TAG, "pull up!parent view move!");
                     footerPrepareToRefresh(deltaY);
                 }
                 mLastMotionY = y;
@@ -327,6 +326,7 @@ public class PullToRefreshView extends LinearLayout {
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
                 int topMargin = getHeaderTopMargin();
+                Log.e(TAG, "the topMargin is " + topMargin);
                 if (mPullState == PULL_DOWN_STATE) {
                     if (topMargin >= 0) {
                         // 开始刷新
@@ -426,7 +426,7 @@ public class PullToRefreshView extends LinearLayout {
         int newTopMargin = changingHeaderViewTopMargin(deltaY);
         // 当header view的topMargin>=0时，说明已经完全显示出来了,修改header view 的提示状态
         if (newTopMargin >= 0 && mHeaderState != RELEASE_TO_REFRESH) {
-            mHeaderTextView.setText("松开加载");
+            mHeaderTextView.setText("释放刷新");
             mHeaderState = RELEASE_TO_REFRESH;
         } else if (newTopMargin < 0 && newTopMargin > -mHeaderViewHeight) {// 拖动时没有释放
             mHeaderTextView.setText("下拉刷新");
@@ -495,7 +495,7 @@ public class PullToRefreshView extends LinearLayout {
         mHeaderState = REFRESHING;
         setHeaderTopMargin(0);
         mHeaderProgressBar.setVisibility(View.VISIBLE);
-        mHeaderTextView.setText("正在载入……");
+        mHeaderTextView.setText("正在刷新");
         if (mOnHeaderRefreshListener != null) {
             mOnHeaderRefreshListener.onHeaderRefresh(this);
         }
@@ -543,7 +543,7 @@ public class PullToRefreshView extends LinearLayout {
     public void onHeaderRefreshComplete() {
         setHeaderTopMargin(-mHeaderViewHeight);
         mHeaderTextView.setText("下拉刷新");
-        mHeaderProgressBar.setVisibility(View.GONE);
+        mHeaderProgressBar.setVisibility(View.VISIBLE);
         mHeaderState = PULL_TO_REFRESH;
     }
 
@@ -553,7 +553,7 @@ public class PullToRefreshView extends LinearLayout {
      * @param lastUpdated Last updated at.
      */
     public void onHeaderRefreshComplete(CharSequence lastUpdated) {
-        // setLastUpdated(lastUpdated);
+        setLastUpdated(lastUpdated);
         onHeaderRefreshComplete();
     }
 
@@ -573,17 +573,16 @@ public class PullToRefreshView extends LinearLayout {
     /**
      * Set a text to represent when the list was last updated.
      *
-     * @param lastUpdated
-     *            Last updated at.
+     * @param lastUpdated Last updated at.
      */
-    // public void setLastUpdated(CharSequence lastUpdated) {
-    // if (lastUpdated != null) {
-    // mHeaderUpdateTextView.setVisibility(View.VISIBLE);
-    // mHeaderUpdateTextView.setText(lastUpdated);
-    // } else {
-    // mHeaderUpdateTextView.setVisibility(View.GONE);
-    // }
-    // }
+    public void setLastUpdated(CharSequence lastUpdated) {
+//        if (lastUpdated != null) {
+//            mHeaderUpdateTextView.setVisibility(View.VISIBLE);
+//            mHeaderUpdateTextView.setText(lastUpdated);
+//        } else {
+//            mHeaderUpdateTextView.setVisibility(View.INVISIBLE);
+//        }
+    }
 
     /**
      * 获取当前header view 的topMargin

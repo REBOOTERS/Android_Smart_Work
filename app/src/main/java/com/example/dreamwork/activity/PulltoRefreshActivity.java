@@ -10,7 +10,9 @@ import com.example.dreamwork.R;
 import com.example.dreamwork.util.V;
 import com.example.dreamwork.widget.PullToRefreshView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -42,7 +44,7 @@ public class PulltoRefreshActivity extends Activity implements PullToRefreshView
         listView = V.f(this, R.id.list);
         listView.setFocusable(false);
 
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_expandable_list_item_1,
                 mdatas);
         listView.setAdapter(adapter);
     }
@@ -64,7 +66,7 @@ public class PulltoRefreshActivity extends Activity implements PullToRefreshView
                 adapter.notifyDataSetChanged();
                 refreshView.onFooterRefreshComplete();
             }
-        }, 1000);
+        }, 2000);
     }
 
     @Override
@@ -75,8 +77,10 @@ public class PulltoRefreshActivity extends Activity implements PullToRefreshView
             public void run() {
                 mdatas.clear();
                 InitDats();
+
                 refreshView.onHeaderRefreshComplete();
             }
-        }, 1000);
+        }, 2000);
     }
+
 }
