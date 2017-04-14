@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.dreamwork.activity.superscrollview.CustomerScrollViews
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.example.dreamwork.activity.superscrollview.UpScrollView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/taobao" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/taobao" />
+
+                    <TextView
+                        android:textSize="20sp"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="60dp"
+                        android:text="查看图文详情"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </com.example.dreamwork.activity.superscrollview.UpScrollView>
+
+
+            <include layout="@layout/selector_tab_items" />
+
+
+
+
+            <com.example.dreamwork.activity.superscrollview.MyWebView
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+    </com.example.dreamwork.activity.superscrollview.CustomerScrollViews>
+
+</LinearLayout>

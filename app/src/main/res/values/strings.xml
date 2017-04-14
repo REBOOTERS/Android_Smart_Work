@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="plugin_name">PluginTheme</string>
+
+    <string name="app_name">DreamWork</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pull_to_refresh_footer_pull_label">继续拖动，查看图文详情</string>
+    <string name="pull_to_refresh_footer_release_label">继续拖动，查看图文详情</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+
+    <string name="pull_to_refresh_release_label">继续拖动，查看商品详情</string>
+
+    <string name="pull_to_refresh_pull_label_index" translatable="false">下拉刷新</string>
+
+    <string name="year">Year</string>
+    <string name="location">Location</string>
+
+    <!--下拉刷新-->
+    <string name="pull_to_refresh_pull_mylabel">继续拖动，加载更多</string>
+    <string name="pull_to_refresh_refreshing_label">正在载入…</string>
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+
+    <string name="loading">裁剪初始化...</string>
+
+    ///////////////
+    <string name="Upload">Upload</string>
+    <string name="Error">Error</string>
+    <string name="Complete">Complete</string>
+    <string name="IndeterminateProgressSample">Indeterminate Progress Sample</string>
+    <string name="IntegerProgressSample">Integer Progress Sample</string>
+    <string name="StateChangeSample">State Change Sample</string>
+    <string name="ProgressPaddingSample">Progress Padding Sample</string>
+    <string name="CustomSelectorSample">Custom Selector Sample</string>
+
+    <array name="sample_list">
+        <item>@string/IndeterminateProgressSample</item>
+        <item>@string/IntegerProgressSample</item>
+        <item>@string/StateChangeSample</item>
+        <item>@string/ProgressPaddingSample</item>
+        <item>@string/CustomSelectorSample</item>
+    </array>
+
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.dreamwork.widget.PullToRefreshView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/parent_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include
+                android:id="@+id/layout_home_banner"
+                layout="@layout/fragment_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ScrollView
+                android:id="@+id/child_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.example.dreamwork.widget.MyListView
+                        android:id="@+id/list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+
+</com.example.dreamwork.widget.PullToRefreshView>
+
+
+
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="t44transparent">#44000000</color>
+    <color name="bantouming">#e0000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="index_font_color">#ff7f00</color>
+    <color name="pb">#e40000</color>
+    <color name="yahui">#919191</color>
+    <color name="jinghuang">#ff7f00</color>
+
+    <!-- drop down list header font color -->
+    <color name="drop_down_list_header_font_color">#000000</color>
+    <!-- drop down list header second font color -->
+    <color name="drop_down_list_header_second_font_color">#000000</color>
+    <!-- drop down list footer font color -->
+    <color name="drop_down_list_footer_font_color">#000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="yellow">#e97d10</color>
+    <color name="shenhui">#111111</color>
+    <color name="my">#FFF2DD87</color>
+    <color name="red">#FF0000</color>
+    <!-- 红色 -->
+
+    <color name="giftbg">#F5F5F5</color>
+
+    <!-- 三只松鼠专用颜色 -->
+    <color name="background">#252a2e</color>
+    <color name="enablebtn">#77bc1f</color>
+    <color name="unablebtn">#dcdcdc</color>
+    <color name="couponcard">#ff5877</color>
+    <color name="buynow">#EEA32E</color>
+    <color name="addtocar">#06d992</color>
+    <color name="dark_bg">#505050</color>
+    <color name="common_bg">#ECECEC</color>
+    <color name="btn_bg">#05D992</color>
+    <color name="zise">#E5004F</color>
+    <color name="dark_bg1">#414141</color>
+
+</resources>
